@@ -4,8 +4,11 @@ from scrapy import Selector
 import psycopg2
 from dotenv import load_dotenv
 import os
+from pathlib import Path
 
-load_dotenv()
+# Busca el .env en la misma carpeta donde está el script
+BASE_DIR = Path(__file__).resolve().parent
+load_dotenv(dotenv_path=BASE_DIR / ".env")
 
 conn = psycopg2.connect(
     host=os.getenv("DB_HOST"),
