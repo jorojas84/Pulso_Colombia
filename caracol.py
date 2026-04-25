@@ -4,9 +4,9 @@ from scrapy import Selector
 import psycopg2
 
 conn = psycopg2.connect(
-    host="localhost",
+    host="174.138.79.235",
     dbname="monitor_noticias",
-    user="jocmiguel",
+    user="postgres",
     password="3148",  # ← ese no lo tengo, ponlo tú
     port=5432
 )

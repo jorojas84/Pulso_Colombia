@@ -21,6 +21,7 @@ packaging==26.0
 pandas==3.0.1
 parsel==1.11.0
 Protego==0.6.0
+psycopg2==2.9.12
 pyasn1==0.6.2
 pyasn1_modules==0.4.2
 pycparser==3.0
