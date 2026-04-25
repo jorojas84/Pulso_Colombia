@@ -2,13 +2,17 @@ import requests
 import pandas as pd
 from scrapy import Selector 
 import psycopg2
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 conn = psycopg2.connect(
-    host="174.138.79.235",
-    dbname="monitor_noticias",
-    user="postgres",
-    password="3148",  # ← ese no lo tengo, ponlo tú
-    port=5432
+    host=os.getenv("DB_HOST"),
+    dbname=os.getenv("DB_NAME"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    port=int(os.getenv("DB_PORT"))
 )
 
 cursor = conn.cursor()
