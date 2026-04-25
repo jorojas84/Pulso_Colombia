@@ -80,3 +80,5 @@ cursor.execute("""
 conn.commit()  # guarda los cambios
 cursor.close()
 conn.close()
+
+print(f"Nuevas: {nuevas} | Ya existían: {vistas}", flush=True)
